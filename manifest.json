@@ -1,0 +1,26 @@
+﻿{
+  "manifest_version": 3,
+  "name": "नेपाली मिति र समय",
+  "version": "1.0",
+  "description": "हरेक पेजको कुनामा नेपाली मिति र समय देखाउनुहोस्।",
+  "permissions": [
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "nepali.js",
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ]
+    }
+  ]
+}

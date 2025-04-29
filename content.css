@@ -1,0 +1,68 @@
+﻿.clockWrapper {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    z-index: 9999999999999999;
+    cursor: move;
+}
+
+.floatingWrapper {
+    position: relative;
+    height: 50px;
+    width: 50px;
+}
+
+.clock {
+    position: relative;
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgreen;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.date-time {
+    position: absolute;
+    top: 0;
+    left: 55px;
+    height: 50px;
+    margin-left: -50px;
+    padding-left: 55px;
+    padding-right: 15px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    font-weight: bold;
+    opacity: 0;
+    transform: scaleX(0.75);
+    transform-origin: left;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.floatingWrapper.direction-right .date-time {
+    left: auto;
+    right: 0;
+    transform-origin: right;
+    padding-right: 55px;
+    padding-left: 15px;
+    margin-left: 0;
+}
+
+.date-time.show {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.clockRounded {
+    border-radius: 50px;
+}
+
+.border-1 {
+    border: 1px solid red;
+}
