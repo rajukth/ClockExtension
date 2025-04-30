@@ -1,5 +1,6 @@
 🕰️ Floating Nepali Clock Extension
-    A draggable, floating Nepali digital clock browser extension that displays the current Nepali date and time on any webpage. Built for Chrome and Chromium-based browsers.
+    
+A draggable, floating Nepali digital clock browser extension that displays the current Nepali date and time on any webpage. Compatible for any browsers.
 
 📸 Features
 
