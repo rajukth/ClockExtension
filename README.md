@@ -1,55 +1,56 @@
 🕰️ Floating Nepali Clock Extension
-A draggable, floating Nepali digital clock browser extension that displays the current Nepali date and time on any webpage. Built for Chrome and Chromium-based browsers.
+    
+A draggable, floating Nepali digital clock browser extension that displays the current Nepali date and time on any webpage. Compatible for any browsers.
 
 📸 Features
-🕰️ Floating digital clock icon
 
-📅 Shows Nepali date and time
-
-↔️ Smart alignment based on screen side
-
-📦 Position is saved using Local Storage
-
-🖱️ Fully draggable
-
-💡 Click to expand/collapse
-
+    1. Floating digital clock icon
+    
+    2. Shows Nepali date and time
+    
+    3. Smart alignment based on screen side
+    
+    4. Position is saved using Local Storage
+    
+    5. Fully draggable
+    
+    6. Click to expand/collapse
+    
 📁 Files Included
-manifest.json – Extension configuration
 
-content.js – Clock logic
-
-nepali.js – Nepali date/time converter
-
-style.css – Custom styles
+    -manifest.json – Extension configuration
+    
+    -content.js – Clock logic
+    
+    -nepali.js – Nepali date/time converter
+    
+    -style.css – Custom styles
 
 🚀 How to Install
-Step 1: Clone or Download This Repo
-  git clone https://github.com/rajukth/ClockExtension.git
-  Or download and extract the ZIP.
-Step 2: Load Extension in Chrome
-Open Chrome and navigate to:
 
-chrome://extensions/
-Enable Developer Mode (top right toggle)
-
-Click Load unpacked
-
-Select the folder you just downloaded or cloned (must include manifest.json)
+    Step 1: Clone or Download This Repo
+    
+        git clone https://github.com/rajukth/ClockExtension.git
+        
+        Or download and extract the ZIP.
+        
+    Step 2: Load Extension in Chrome
+      
+      - Open Chrome and navigate to: chrome://extensions/
+      
+      - Enable Developer Mode (top right toggle)
+      
+      - Click Load unpacked
+      
+      - Select the folder you just downloaded or cloned (must include manifest.json)
 
 📌 How to Use
-🖱 Drag the clock anywhere on the screen
+    
+    1. Drag the clock anywhere on the screen
+    
+    2. Click the clock icon to toggle Nepali time/date display
 
-✖ Click the clock icon to toggle Nepali time/date display
+    3. Position is saved automatically
 
-💾 Position is saved automatically
 
-🔧 Customize
-You can modify:
-
-Clock styles in style.css
-
-Date/time format in content.js
-
-Nepali conversion logic in nepali.js
 
