@@ -14,7 +14,6 @@
             font-family: Arial, sans-serif;
             margin: 0;
             height: 100vh;
-            background-color: #f0f0f0;
         }
 
         .clockWrapper {
@@ -22,13 +21,14 @@
             bottom: 10px;
             left: 10px;
             z-index: 9999999999999999;
+            color:#000;
             cursor: move;
         }
 
         .floatingWrapper {
             position: relative;
             height: 50px;
-            width: 50px; /* Prevent expanding */
+            width: 50px;
         }
 
         .clock {
@@ -46,8 +46,6 @@
 
         .date-time {
             position: absolute;
-
-
             top: 0;
             left: 55px;
             height: 50px;
@@ -73,7 +71,6 @@
             padding-right: 55px;
             padding-left: 15px;
             margin-left: 0;
-
         }
 
         .date-time.show {
