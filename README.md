@@ -25,7 +25,7 @@ style.css – Custom styles
 
 🚀 How to Install
 Step 1: Clone or Download This Repo
-  git clone https://github.com/yourusername/floating-nepali-clock.git
+  git clone https://github.com/rajukth/ClockExtension.git
   Or download and extract the ZIP.
 Step 2: Load Extension in Chrome
 Open Chrome and navigate to:
