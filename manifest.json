@@ -4,7 +4,7 @@
   "version": "1.0",
   "description": "हरेक पेजको कुनामा नेपाली मिति र समय देखाउनुहोस्।",
   "permissions": [
-    "scripting"
+    "storage"
   ],
   "background": {
     "service_worker": "background.js"
@@ -21,6 +21,15 @@
       "css": [
         "content.css"
       ]
+    }
+  ],
+  "host_permissions": [
+    "storage"
+  ],  
+  "web_accessible_resources": [
+    {
+      "resources": ["browser-polyfill.min.js"],
+      "matches": ["<all_urls>"]
     }
   ]
 }
