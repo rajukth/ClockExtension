@@ -28,12 +28,10 @@
 
     if (!browser.runtime) {
         browser.runtime = {
-            sendMessage: (msg, callback) => {
-                console.log("Mock sendMessage called with:", msg);
+            sendMessage: (msg, callback) => {                
                 if (msg.type === 'load-position') {
                     callback && callback({ position: { top: '100px', left: '100px' } });
-                } else if (msg.type === 'save-position') {
-                    console.log("Mock saving position:", msg.position);
+                } else if (msg.type === 'save-position') {                    
                     callback && callback({ status: 'saved' });
                 }
             }

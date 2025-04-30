@@ -18,18 +18,7 @@ if (!runtime) {
 
     // Send message to load position from storage
     runtime.runtime.sendMessage({ type: 'load-position' }, (response) => {
-        const saved = response.position;
-        if (saved) {
-            clockWrapper.style.top = saved.top;
-            if (saved.left !== undefined) {
-                clockWrapper.style.left = saved.left;
-                clockWrapper.style.right = 'auto';
-            } else if (saved.right !== undefined) {
-                clockWrapper.style.right = saved.right;
-                clockWrapper.style.left = 'auto';
-                floatingWrapper.classList.add('direction-right');
-            }
-        }
+        applyClockPosition(response.position);
     });
 
     // Create clockIcon
@@ -147,5 +136,26 @@ if (!runtime) {
         }
 
         runtime.runtime.sendMessage({ type: 'save-position', position: data });
+    }
+    runtime.storage.onChanged.addListener((changes, area) => {
+        if (area === 'local' && changes.clockPosition) {
+            const newPosition = changes.clockPosition.newValue;
+            applyClockPosition(newPosition);
+        }
+    });
+    function applyClockPosition(position) {
+        if (!position) return;
+
+        clockWrapper.style.top = position.top;
+
+        if (position.left !== undefined) {
+            clockWrapper.style.left = position.left;
+            clockWrapper.style.right = 'auto';
+            floatingWrapper.classList.remove('direction-right');
+        } else if (position.right !== undefined) {
+            clockWrapper.style.right = position.right;
+            clockWrapper.style.left = 'auto';
+            floatingWrapper.classList.add('direction-right');
+        }
     }
 }
